@@ -7,5 +7,11 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'dailyrecord/start_page.html')
 
+def loginP(request):
+    return render(request, 'dailyrecord/login_page.html')
+
+def joinP(request):
+    return render(request, 'dailyrecord/join_page.html')
+
 def header(request):
     return render(request, 'dailyrecord/header.html')
