@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:: Daily Record ::</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/static/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                background-color: #f1c2c2;
+                justify-content: center;
+                align-items: center;
+                vertical-align: middle;
+            }
+            div#titleB{
+                font-family: 'Alex Brush', cursive;
+                font-size: 50px;
+                font-weight: bold;
+            }
+            div#ID{
+                width: 200px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: right;
+            }
+            div#PW{
+                width: 200px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: right;
+            }
+            
+        </style>
+        <!-- Custom styles for this template -->
+        <link href="/static/signin.css" rel="stylesheet">
+
+    </head>
+    <body class = "text-center">
+        <!-- header -->
+        <div id="titleB">
+            <div class="jumbotron text-center">
+                <center>
+                    <h1>Daily Record</h1>
+                </center>
+            </div>
+        </div>
+        <!-- content -->
+        <div id="form-signin">
+            <form>
+                <div id="ID">
+                    <div class="jumbotron text-center">
+                            <span style="font-family: 'Ubuntu', sans-serif;">
+                            <label for="inputEmail" class="visually-hidden">ID</label></span>
+                            <input type="email" id="inputId" class="form-control" placeholder="ID" required autofocus>
+                        
+                    </div>
+                </div>
+                <div id="PW">
+                    <div class="jumbotron text-center">
+                            <span style="font-family: 'Ubuntu', sans-serif;">
+                            <label for="inputPassword" class="visually-hidden">PW</label>
+                        </span>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    </div>
+                </div>
+                <br>
+                <div id="signIn">
+                    <center>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                    </center>
+                </div>
+                <br>
+                <div id="signElse">
+                    <center>
+                        <button type="button" class="btn btn-outline-light">SIGN UP</button>
+                        <button type="button" class="btn btn-outline-light">FORGOT PASSWORD</button>
+                    </center>
+                </div>
+                
+                </form>
+            </main>
+        <!-- footer -->
+    
+    </body>
+    
+    </html>

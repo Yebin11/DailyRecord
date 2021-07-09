@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:: Daily Record - JOIN::</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/static/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                background-color: #f1c2c2;
+                align-items: center;
+            }
+            div#titleB{
+                font-family: 'Alex Brush', cursive;
+                font-size: 50px;
+                font-weight: bold;
+            }
+            div#sign-up{
+                width: 400px;
+                position: relative;
+                left: 42%;
+                transform: translateX(-50%);
+                text-align: right;
+                font-family: 'Ubuntu', sans-serif;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            div#submit{
+                width: 400px;
+                position: relative;
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+            
+        </style>
+        <script language="javascript">
+            function showAlert() {
+                alert("Daily Record는 여러분의 이메일과, 암호화된 비밀번호를 수집합니다. 또한, 서비스 이용과정 과정에서 단말기정보(OS, 화면사이즈, 디바이스 아이디), IP주소, 쿠키, 방문일시, 부정이용기록, 서비스 이용 기록 등의 정보가 자동으로 생성되어 수집될 수 있습니다.\n\nDaily Record는 여러분의 별도 동의가 있는 경우나 법령에 규정된 경우를 제외하고는 여러분의 개인정보를 절대 제3자에게 제공하지 않습니다. 사용자가 제공한 개인정보는 서비스를 제공하기 위해서만 사용되며, 여러분의 개인정보를 절대 제 3자에게 제공하지 않습니다.\n");
+            }
+            </script>
+        <!-- Custom styles for this template -->
+        <link href="/static/signin.css" rel="stylesheet">
+
+    </head>
+    <body class = "text-center">
+        <!-- header -->
+        
+        <!-- content -->
+        {% block contents %}
+        <div id="titleB">
+            <div class="jumbotron text-center">
+                <center>
+                    <h1>Daily Record</h1>
+                </center>
+            </div>
+        </div>
+        <center>
+            <h2><span style="font-family: 'Ubuntu', sans-serif;">SIGN UP</span></h2>
+        </center>
+        
+        <div id="sign-up">
+            <div class="container">
+                <form action="">
+                    ID:<input name="userID" type="text">
+                    <br>
+                    <br>
+                    PW:<input name="userPW" type="password">
+                    <br>
+                    <br>
+                    Confirm Password:<input name="userPWChk" type="password">
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+        <div id="submit">
+            <div class="checkbox">
+                <center>
+                <label>
+                    <input type="checkbox" value="infoAlert" onclick="showAlert();"> 개인정보 취급방침에 동의합니다. </label>
+                </center>
+            </div>
+            <br>
+            <div>
+                <center>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">SIGN UP</button>
+                </center>
+            </div>
+        </div>
+        {% endblock %}
+        <!-- footer -->
+    
+    </body>
+    
+    </html>
+
+
