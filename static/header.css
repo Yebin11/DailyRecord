@@ -1,0 +1,20 @@
+body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-custom{
+  background-color: #f1c2c2;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+  color: black;
+}
+
+.navbar-custom .navbar-nav .nav-link{
+  color: black;
+}
