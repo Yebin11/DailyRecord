@@ -12,3 +12,6 @@ def loginP(request):
 
 def joinP(request):
     return render(request, 'dailyrecord/join_page.html')
+
+def header(request):
+    return render(request, 'dailyrecord/header.html')
