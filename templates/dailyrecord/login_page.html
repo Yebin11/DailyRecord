@@ -22,7 +22,7 @@
                 font-weight: bold;
             }
             div#ID{
-                width: 200px;
+                width: 250px;
                 margin-top: 10px;
                 margin-bottom: 10px;
                 position: relative;
@@ -31,7 +31,7 @@
                 text-align: right;
             }
             div#PW{
-                width: 200px;
+                width: 250px;
                 margin-top: 10px;
                 margin-bottom: 10px;
                 position: relative;
@@ -39,8 +39,51 @@
                 transform: translateX(-50%);
                 text-align: right;
             }
+            #btnSignIn{
+                border: 1px #f1c2c2;
+                background-color: #f1c2c2;
+                font-family: 'Ubuntu', sans-serif;
+                border-radius: 5px;
+                font-size: large;
+            }
+            #btnSignIn:hover{
+                color:white;
+                background-color: #f59d9d;
+            }
+            #btnSignUp{
+                border: 1px #f1c2c2;
+                background-color: #f1c2c2;
+                font-family: 'Ubuntu', sans-serif;
+                border-radius: 5px;
+                font-size: medium;
+            }
+            #btnSignUp:hover{
+                color:white;
+                background-color: #f59d9d;
+            }
+            #btnInfo{
+                border: 1px #f1c2c2;
+                background-color: #f1c2c2;
+                font-family: 'Ubuntu', sans-serif;
+                border-radius: 5px;
+                font-size: medium;
+            }
+            #btnInfo:hover{
+                color:white;
+                background-color: #f59d9d;
+            }
+            .form-control{
+                width: 180px;
+                padding: 7px;
+                border-radius: 5px;
+            }
             
         </style>
+        <script language="javascript">
+            function pop_findInfo() {
+                window.open("popup_findInfo.html", "a", "width=400, height=300, left=100, top=50");
+            }
+            </script>
         <!-- Custom styles for this template -->
         <link href="/static/signin.css" rel="stylesheet">
 
@@ -74,17 +117,18 @@
                     </div>
                 </div>
                 <br>
-                <div id="signIn">
+                <div class="btnGroup">
                     <center>
-                        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                        <button id="btnSignIn" type="submit">SIGN IN</button>
                     </center>
-                </div>
-                <br>
-                <div id="signElse">
+                    <br>
+                    
                     <center>
-                        <button type="button" class="btn btn-outline-light">SIGN UP</button>
-                        <button type="button" class="btn btn-outline-light">FORGOT PASSWORD</button>
+                        <button id="btnSignUp">SIGN UP</button>
+                        ||
+                        <button id="btnInfo" onclick="window.open('findInfo/','ID/PW 찾기','width=500,height=300,location=no,status=no,scrollbars=yes');">FORGOT ID/PW</button>
                     </center>
+                    
                 </div>
                 
                 </form>
