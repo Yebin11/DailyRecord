@@ -23,17 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
-import os, json
-from django.core.exceptions import ImproperlyConfigured
-
-secret_file = os.path.join(BASE_DIR, 'secrets.json') # secrets.json 파일 위치를 명시
+secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
 with open(secret_file) as f:
     secrets = json.loads(f.read())
 
 def get_secret(setting, secrets=secrets):
-    """비밀 변수를 가져오거나 명시적 예외를 반환한다."""
     try:
         return secrets[setting]
     except KeyError:
@@ -41,7 +36,6 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured(error_msg)
 
 SECRET_KEY = get_secret("SECRET_KEY")
-# SECRET_KEY = 'django-insecure-brwjp1&gt_+9**t8vt61+0#xilj&$xbpuh9_a!t*t+8x_ez4&u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

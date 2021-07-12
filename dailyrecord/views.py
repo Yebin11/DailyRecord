@@ -10,6 +10,9 @@ def index(request):
 def loginP(request):
     return render(request, 'dailyrecord/login_page.html')
 
+def findInfoP(request):
+    return render(request, 'dailyrecord/popup_findinfo.html')
+
 def joinP(request):
     return render(request, 'dailyrecord/join_page.html')
 

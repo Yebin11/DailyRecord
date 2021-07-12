@@ -4,7 +4,7 @@
         <title>:: Daily Record - JOIN::</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Alex+Brush&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,7 +26,6 @@
                 transform: translateX(-50%);
                 text-align: right;
                 font-family: 'Ubuntu', sans-serif;
-                margin-top: 10px;
                 margin-bottom: 10px;
             }
             div#submit{
@@ -36,7 +35,25 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
-            
+            .checkbox{
+                font-family: 'Do Hyeon', sans-serif;
+            }
+            #signUpBtn{
+                border: 1px #f1c2c2;
+                background-color: #f1c2c2;
+                font-family: 'Ubuntu', sans-serif;
+                border-radius: 5px;
+                font-size: large;
+            }
+            #signUpBtn:hover{
+                color:white;
+                background-color: #f59d9d;
+            }
+            .inputBox{
+                width: 180px;
+                padding: 7px;
+                border-radius: 5px;
+            }         
             
         </style>
         <script language="javascript">
@@ -67,14 +84,16 @@
         <div id="sign-up">
             <div class="container">
                 <form action="">
-                    ID:<input name="userID" type="text">
+                    ID <input name="userID" class="inputBox" type="text">
                     <br>
                     <br>
-                    PW:<input name="userPW" type="password">
+                    PW <input name="userPW" class="inputBox" type="password">
                     <br>
                     <br>
-                    Confirm Password:<input name="userPWChk" type="password">
+                    Confirm PW <input name="userPWChk" class="inputBox" type="password">
                     <br>
+                    <br>
+                    Email <input name="userID" class="inputBox" type="text">
                     <br>
                 </form>
             </div>
@@ -89,7 +108,7 @@
             <br>
             <div>
                 <center>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">SIGN UP</button>
+                    <button id = "signUpBtn" type="submit">SIGN UP</button>
                 </center>
             </div>
         </div>
