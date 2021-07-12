@@ -36,7 +36,6 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured(error_msg)
 
 SECRET_KEY = get_secret("SECRET_KEY")
-# SECRET_KEY = 'django-insecure-brwjp1&gt_+9**t8vt61+0#xilj&$xbpuh9_a!t*t+8x_ez4&u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
