@@ -15,3 +15,6 @@ def joinP(request):
 
 def header(request):
     return render(request, 'dailyrecord/header.html')
+
+def mypage(request):
+    return render(request, 'dailyrecord/mypage.html')

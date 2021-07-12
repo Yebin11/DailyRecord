@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.index),
     path('login/', views.loginP),
     path('join/', views.joinP),
-    path('header/', views.header, name='header')
+    path('header/', views.header, name='header'),
+    path('mypage/', views.mypage, name='mypage'),
 ]
