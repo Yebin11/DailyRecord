@@ -1,0 +1,21 @@
+{% extends 'dailyrecord/header.html' %}
+{% load static %}
+
+{% block content %}
+
+<link href="{% static 'pw_reset.css'%}" rel="stylesheet">
+
+<main role="main">
+
+<div class="text-center">
+    <form class="form-signin">
+        <label for="newPassword" class="sr-only">New Password</label>
+        <input type="password" id="newPassword" class="form-control" placeholder="New Password" required autofocus>
+        <label for="confirmPassword" class="sr-only">Password</label>
+        <input type="password" id="confirmPassword" class="form-control" placeholder="confirmPassword" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">확인</button>
+    </form> 
+</div>
+</main>
+
+{% endblock %}

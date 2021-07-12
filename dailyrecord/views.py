@@ -18,3 +18,6 @@ def header(request):
 
 def mypage(request):
     return render(request, 'dailyrecord/mypage.html')
+
+def pw_reset(request):
+    return render(request, 'dailyrecord/pw_reset.html')

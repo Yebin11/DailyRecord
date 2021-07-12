@@ -1,30 +1,52 @@
 {% extends 'dailyrecord/header.html' %}
 {% block content %}
-<div class="developer-email">
-  <div class="container">
-    <h1 class="display-3">문의사항</h1>
-    <p>문의사항은 개발자 메일로 보내주세요.</p>
-    <p>question@dailyrecord.com</p>
-  </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>비밀번호 변경</h2>
-      <p>보안을 위해 6개월마다 비밀번호를 변경하시길 권장합니다.</p>
-      <p><a class="btn btn-secondary" href="#" role="button">비밀번호 변경</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>쓴 글 초기화</h2>
-      <p>지금까지 쓴 글을 모두 삭제합니다.</p>
-      <p><a class="btn btn-secondary" href="#" role="button">초기화</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>탈퇴하기</h2>
-      <p>회원 정보를 삭제합니다.</p>
-      <p><a class="btn btn-secondary" href="#" role="button">탈퇴하기</a></p>
+<script language="javascript">
+  function reestAlert() {
+    if(confirm("정말로 초기화 하시겠습니까?")){
+      alert("초기화 되었습니다.");
+    }
+    else{
+      alert("취소되었습니다.");
+    }
+  }
+  function signoutAlert(){
+    if(confirm("정말로 탈퇴하시겠습니까?")){
+      alert("탈퇴가 완료되었습니다.");
+    }
+    else{
+      alert("취소되었습니다.");
+    }
+  }
+</script>
+
+<main roll="main">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">문의사항</h1>
+      <p>문의사항은 개발자 메일로 보내주세요.</p>
+      <p>question@dailyrecord.com</p>
     </div>
   </div>
-</div>
-{% endblock%}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>비밀번호 변경</h2>
+        <p>보안을 위해 6개월마다 비밀번호를 변경하시길 권장합니다.</p>
+        <p><a class="btn btn-secondary" href="{% url 'dailyrecord:pw_reset'%}" role="button">비밀번호 변경</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>쓴 글 초기화</h2>
+        <p>지금까지 쓴 글을 모두 삭제합니다.</p>
+        <p><button class="btn btn-secondary" onclick="reestAlert();">초기화</button></p>
+      </div>
+      <div class="col-md-4">
+        <h2>탈퇴하기</h2>
+        <p>회원 정보를 삭제합니다.</p>
+        <p><button class="btn btn-secondary" onclick="signoutAlert();">탈퇴하기</button></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
