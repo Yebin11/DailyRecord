@@ -1,0 +1,105 @@
+{% extends 'dailyrecord/header.html' %}
+{% block content %}
+
+<head>
+    <title>Daily Record - 글쓰기</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Alex+Brush&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/static/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #currDate{
+                font-family: 'Ubuntu', sans-serif;
+                font-size:xx-large;
+                margin-bottom: 20px;
+                border: 3px solid;
+                width: fit-content;
+                border-color: #f59d9d;
+                border-radius: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            body{
+                background-color: #f1c2c2;
+            }
+            #submitBtn{
+                border: 1px #f1c2c2;
+                background-color: #f1c2c2;
+                font-family: 'Ubuntu', sans-serif;
+                border-radius: 5px;
+                font-size: large;
+            }
+            #submitBtn:hover{
+                color:white;
+                background-color: #f59d9d;
+            }
+            #titleArea{
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            #contentArea{
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            #title{
+                width: 800px;
+            }
+            #content{
+                width:800px;
+                height:400px;
+            }
+            
+        </style>
+    <script language="javascript">
+        function getDate(){
+            
+            const date = new Date();
+            const month = date.getMonth()+1;
+            const day = date.getDate();
+            const result = `${month}/${day}`;
+            document.getElementById("currDate").innerHTML=result;
+        }
+    </script>
+
+</head>
+
+<body>
+    <center>
+    <div class="default">
+        <div id="currDate">
+            date
+        </div>
+        <script>
+            getDate();
+        </script>
+    </div>
+</center>
+    <div class="form">
+        <form action="write.jsp" method="post">
+            <center>
+            <div class="form-group" id="titleArea">
+              <input type="text" class="form-control" id="title"
+               placeholder="제목" name="title" required="required">
+            </div>
+            <div class="form-group" id="contentArea">
+                <textarea class="form-control" rows="5" id="content" name="content" placeholder="내용">                    
+                </textarea>
+            </div>
+        </center>
+          </form>
+    </div>
+    <div>
+        <center>
+            <button id = "submitBtn" type="submit">SUBMIT</button>
+        </center>
+    </div>
+</body>
+
+
+
+{% endblock %}
