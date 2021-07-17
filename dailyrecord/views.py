@@ -24,3 +24,6 @@ def mypage(request):
 
 def pw_reset(request):
     return render(request, 'dailyrecord/pw_reset.html')
+
+def calendar(request):
+    return render(request, 'dailyrecord/calendar.html')
