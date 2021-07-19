@@ -27,3 +27,6 @@ def pw_reset(request):
 
 def write(request):
     return render(request, 'dailyrecord/write.html')
+
+def reward(request):
+    return render(request, 'dailyrecord/reward.html')
