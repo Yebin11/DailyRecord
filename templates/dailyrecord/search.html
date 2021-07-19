@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <script src="https://kit.fontawesome.com/5f06458ea4.js" crossorigin="anonymous"></script>
+    <title>Daily Record</title>
+</head>
+<body style="background-color: #f1c2c2">
+    <div>{% include 'navbar.html' %}</div>
+    <div class="main-grid">
+        <form class="search-form form-inline">
+            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                aria-label="Search">
+            <i class="fas fa-search"></i>
+        </form>
+        <div class="tag-box">
+            <div>#test</div>
+        </div>
+    </div>
+</body>
+</html>
