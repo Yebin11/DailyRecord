@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'calendar.css' %}">
+  <title>Daily Record</title>
+  <style>
+    .main-grid{
+      background-color: white;
+      position: absolute;
+      z-index: -2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .record{
+      margin: 20px;
+      border: 5px solid gray;
+    }
+    .record-title{
+      border-bottom: 5px solid gray;
+    }
+  </style>
+</head>
+<body style="background-color: #f1c2c2">
+  <div>{% include 'navbar.html' %}</div>
+  <div class="main-grid">
+    <div class="calendar">
+      <div class="header">
+        <div class="year-month"></div>
+        <div class="month-move">
+          <button class="month-move-btn go-prev" onclick="prevMonth()">&lt;</button>
+          <button class="month-move-btn go-today" onclick="goToday()">Today</button>
+          <button class="month-move-btn go-next" onclick="nextMonth()">&gt;</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="days">
+          <div class="day">일</div>
+          <div class="day">월</div>
+          <div class="day">화</div>
+          <div class="day">수</div>
+          <div class="day">목</div>
+          <div class="day">금</div>
+          <div class="day">토</div>
+        </div>
+        <div class="dates"></div>
+      </div>
+    </div>
+    <div class="records">
+      <div class="record">
+        <div class="record-title">title</div>
+        <div class="record-content">content</div>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'calendar.js' %}"></script>
+</body>
+</html>

@@ -30,3 +30,9 @@ def write(request):
 
 def reward(request):
     return render(request, 'dailyrecord/reward.html')
+
+def calendar(request):
+    return render(request, 'dailyrecord/calendar.html')
+
+def search(request):
+    return render(request, 'dailyrecord/search.html')
