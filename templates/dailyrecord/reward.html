@@ -1,0 +1,231 @@
+{% extends 'dailyrecord/header.html' %}
+{% block content %}
+
+<head>
+    <title>Daily Record - Reward</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Alex+Brush&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/static/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .container{
+                margin: auto;
+            }
+            .imgRow{
+                margin: auto;
+                width: 800px;
+                display: grid;
+                grid-template-columns: repeat(5, 130px);
+                gap: 10px;
+            }
+            img{
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+            }
+            figcaption{
+                font-family: 'Do Hyeon', sans-serif;
+                text-align: center;
+            }
+            
+        </style>
+    <script language="javascript">
+        function changeImg(){
+            var imgTag = document.getElementById("10");
+            imgTag.setAttribute("src", "/static/img/10.png");
+            //("src", "/static/img/"+num+".png");
+        }
+    </script>
+
+</head>
+
+<body>
+    <container class="rewards">
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="1">
+                <figcaption>시작이 반!</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="3">
+                <figcaption>작심삼일</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="5">
+                <figcaption>5일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="7">
+                <figcaption>일주일 클리어</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="10">
+                <figcaption>10일 달성</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="15">
+                <figcaption>한 달의 절반</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="20">
+                <figcaption>20일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="30">
+                <figcaption>벌써 한 달</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="40">
+                <figcaption>40일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="50">
+                <figcaption>100일의 절반</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="60">
+                <figcaption>벌써 두 달</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="70">
+                <figcaption>70일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="80">
+                <figcaption>80일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="90">
+                <figcaption>90일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="100">
+                <figcaption>100일 돌파!</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="110">
+                <figcaption>110일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="120">
+                <figcaption>120일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="130">
+                <figcaption>130일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="140">
+                <figcaption>140일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="150">
+                <figcaption>150일 달성</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="160">
+                <figcaption>160일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="170">
+                <figcaption>170일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="180">
+                <figcaption>벌써 반년</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="190">
+                <figcaption>곧 200일</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="200">
+                <figcaption>200일 돌파!</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="210">
+                <figcaption>210일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="220">
+                <figcaption>220일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="230">
+                <figcaption>230일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="240">
+                <figcaption>240일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="250">
+                <figcaption>250일 달성</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="260">
+                <figcaption>260일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="270">
+                <figcaption>270일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="280">
+                <figcaption>280일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="290">
+                <figcaption>곧 300일</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="300">
+                <figcaption>300일 돌파!</figcaption>
+            </figure>
+        </div>
+        <div class="imgRow">
+            <figure>
+                <img src="/static/img/default.png" id="310">
+                <figcaption>310일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="320">
+                <figcaption>320일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="330">
+                <figcaption>330일 달성</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="340">
+                <figcaption>고지가 눈앞</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/img/default.png" id="365">
+                <figcaption>일 년의 기록들</figcaption>
+            </figure>
+        </div>
+        <button id="changeImg" onclick=changeImg()>CHANGE</button>
+
+
+    </container>
+</body>
+
+
+
+{% endblock %}

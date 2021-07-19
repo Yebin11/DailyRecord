@@ -13,4 +13,5 @@ urlpatterns = [
     path('mypage/', views.mypage, name='mypage'),
     path('pw_reset/', views.pw_reset, name='pw_reset'),
     path('write/', views.write),
+    path('reward/', views.reward),
 ]
